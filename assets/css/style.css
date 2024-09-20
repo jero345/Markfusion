@@ -30,6 +30,61 @@
 /*--------------------------------------------------------------
 1. Typography
 ----------------------------------------------------------------*/
+.btn-whatsapp {
+	position: fixed;
+	z-index: 999;
+	bottom: 100px; /* Valor ajustado para móviles o tablets */
+	right: 20px;
+}
+
+@media (min-width: 768px) { /* Para pantallas más grandes (tablets grandes y escritorio) */
+	.btn-whatsapp {
+		bottom: 20px; /* Mantén el valor original para desktop o ajusta como prefieras */
+	}
+}
+
+.btn-whatsapp:before,
+.btn-whatsapp:after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 4px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: #00e676;
+	opacity: 0;
+	animation: onda 1.7s infinite;
+}
+
+.btn-whatsapp:before {
+	animation-delay: 1s;
+}
+
+.btn-whatsapp:after {
+	animation-delay: 1.3s;
+}
+
+.btn-whatsapp img {
+	position: relative;
+	z-index: 2;
+}
+
+@keyframes onda {
+	0% {
+		transform: scale(1);
+	}
+
+	15%{
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(2.5);
+	}
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;600;700&display=swap");
 body,
 html {
@@ -2221,8 +2276,8 @@ label {
 
 .cs-scrollup {
   position: fixed;
-  bottom: -60px;
-  right: 40px;
+  bottom: 100px; /* Mueve el botón más arriba */
+  right: 40px;   /* Asegura que esté alineado a la derecha */
   color: #fff;
   padding: 5px;
   height: 50px;
@@ -2252,7 +2307,7 @@ label {
 }
 
 .cs-scrollup.cs-scrollup_show {
-  bottom: 50px;
+  bottom: 90px;
 }
 
 .cs-case_study {
