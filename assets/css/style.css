@@ -3601,7 +3601,15 @@ label {
           align-items: center;
   gap: 10px 40px;
 }
-
+@media (max-width: 460px) {
+  .cs-site_branding img {
+    max-width: 100px; /* Ajusta el tamaño para que se vea mejor */
+    height: auto;
+  }
+}
+.cs-site_branding img {
+  margin: 10px 0; /* Ajusta el espacio según sea necesario */
+}
 .cs-site-branding {
   display: inline-block;
   max-width: 180px;
